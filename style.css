@@ -5,27 +5,32 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    /* 171.429% */
     letter-spacing: 0.2px;
 }
 
+/* add backgound image and place content in center */
 header {
-
-    background-image: url(img/coverback-image.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/coverback-image.png);
     background-size: cover;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
+
+/* STYLE NAVIGATION BAR: LOGO AND RIGHT SIDE OF THE BAR  */
+
 nav {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 462px;
     margin: 0px 59px 0px 59px;
     padding: 23px 164px 23px 136px;
-    height: 104px;
-
+    max-width: 1322px;
 }
 
 .nav-right-side {
@@ -35,7 +40,6 @@ nav {
     justify-content: space-between;
     gap: 39px;
 }
-
 
 
 .logo {
@@ -50,7 +54,6 @@ nav {
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 0.1px;
-
 }
 
 .nav-ul {
@@ -74,14 +77,19 @@ nav {
     line-height: 24px;
 }
 
+.nav-ul li a:hover {
+    text-decoration: underline;
+}
+
 .nav-right {
     display: flex;
     flex-direction: row;
     gap: 18px;
 }
 
-.container-headline {
+/* STYLE THE HEADLINE CONTAINER */
 
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,14 +133,16 @@ h4 {
     /* margin: 0; */
 }
 
-.btn-wrap {
+.button-wrap {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
 }
 
+/* ADD A LOT OF PROPERTIES FOR BUTTONS */
 .btn-orange {
     width: 185px;
     height: 48px;
@@ -148,6 +158,13 @@ h4 {
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+.btn-orange:hover {
+    opacity: 0.8;
+    transition: ease-in 0.3s;
+
 }
 
 .btn-default {
@@ -159,12 +176,18 @@ h4 {
     background-color: transparent;
     color: white;
     text-align: center;
-    font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0.2px;
+    cursor: pointer;
 
+}
 
+.btn-default:hover {
+    opacity: 0.8;
+    border: none;
+    background-color: #FFA62B;
+    transition: ease-in 0.3s;
 }
