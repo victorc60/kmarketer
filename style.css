@@ -183,3 +183,83 @@ h4 {
     background-color: #FFA62B;
     transition: ease-in 0.3s;
 }
+
+@media screen and (max-width: 640px) {
+
+    .header__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__container--navigation {
+        margin-top: 40px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        box-sizing: border-box;
+
+
+
+    }
+
+    .header__container--rigth-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 15px;
+    }
+
+    .head__container--rigth-side__ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .header__container--heading__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+
+        max-width: 573px;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.2px;
+        margin: 0;
+    }
+
+    h4 {
+        max-width: 573px;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        margin: 0;
+
+    }
+
+    .button {
+        font-size: 10px;
+        padding: 2px 7px 2px 7px;
+    }
+}
