@@ -1,12 +1,20 @@
+:root {
+    --primary-color: #FFA62B;
+    --background-color: #252B42;
+
+}
+
 .body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    color: white;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.2px;
     min-width: 320px;
+    background-color: var(--background-color);
 }
 
 /* add backgound image and place content in center */
@@ -139,6 +147,11 @@ h4 {
     margin: 0;
 }
 
+h5 {
+    margin: 0;
+}
+
+
 .button-wrap {
     display: flex;
     flex-direction: row;
@@ -167,8 +180,8 @@ h4 {
 .btn-orange {
 
 
-    border-color: #FFA62B;
-    background-color: #FFA62B;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .btn-orange:hover {
@@ -180,9 +193,108 @@ h4 {
 .btn-default:hover {
     opacity: 0.8;
     border: none;
-    background-color: #FFA62B;
+    background-color: var(--primary-color);
     transition: ease-in 0.3s;
 }
+
+
+/* STYLE SECOND SECTION */
+.container__choose-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 195px 100px 198px;
+
+}
+
+/* STYLE HEADING */
+.choose-us__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 864px;
+    padding: 40px 0px 40px 0px;
+}
+
+.choose-us__heading--h-two {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    margin: 0;
+    text-align: center;
+}
+
+.choose-us__heading--p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    max-width: 390px;
+    letter-spacing: 0.2px;
+    margin: 10px 0px 0px 0px;
+}
+
+.choose-us__heading--paragr {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    max-width: 470px;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+/* STYLE CONTAINER WITH CARDS */
+.choose-us__container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+.choose-us__container--card {
+    background-color: white;
+    max-width: 328px;
+    color: black;
+    padding: 35px 40px 35px 40px;
+    display: grid;
+    gap: 15px;
+    align-items: center;
+}
+
+.container--card-heading {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 0;
+    min-height: 48px;
+
+}
+
+.card-p {
+    margin: 0px;
+    max-width: 248px;
+    color: rgba(115, 115, 115, 1);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card-heading {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+
+
+
 
 @media screen and (max-width: 640px) {
 
@@ -236,21 +348,14 @@ h4 {
 
     h1 {
 
-        max-width: 573px;
-        text-align: center;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
         line-height: 40px;
         letter-spacing: 0.2px;
         margin: 0;
     }
 
     h4 {
-        max-width: 573px;
-        text-align: center;
         font-size: 12px;
-        font-style: normal;
         font-weight: 700;
         line-height: 20px;
         letter-spacing: 0.2px;
