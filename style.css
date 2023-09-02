@@ -5,6 +5,8 @@
     --light-text-color: #FFF;
     --muted-color: #BDBDBD;
     --secondary-color: #16697A;
+    --second-text-color:#737373;
+    --text-color:#252B42;
 }
 
 .body {
@@ -16,7 +18,7 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.2px;
-    min-width: 320px;
+    /* min-width: 320px */
     background-color: var(--background-color);
 }
 
@@ -60,8 +62,8 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 23px 164px 23px 136px;
-    max-width: 1022px;
+    padding: 23px 0px 23px 0px;
+    max-width: 1050px;
 }
 
 .header__container--rigth-side {
@@ -81,6 +83,7 @@ a {
     line-height: 32px;
     letter-spacing: 0.1px;
     padding-left: 20px;
+    padding-right: 57px;
 }
 
 .head__container--rigth-side__ul {
@@ -138,8 +141,8 @@ a {
 
 }
 
-h1 {
-    max-width: 573px;
+.heading-one {
+    max-width: 461px;
     text-align: center;
     font-size: 58px;
     font-style: normal;
@@ -149,7 +152,7 @@ h1 {
     margin: 0;
 }
 
-h4 {
+.heading-four {
     max-width: 573px;
     text-align: center;
     font-size: 20px;
@@ -222,7 +225,7 @@ h5 {
 }
 
 /* STYLE HEADING */
-.choose-us__heading {
+.heading {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,7 +234,7 @@ h5 {
     padding: 40px 0px 40px 0px;
 }
 
-.choose-us__heading--h-two {
+.heading--two {
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -239,6 +242,7 @@ h5 {
     letter-spacing: 0.2px;
     margin: 0;
     text-align: center;
+    max-width: 481px;
 }
 
 .choose-us__heading--p {
@@ -321,7 +325,6 @@ h5 {
     align-items: center;
     width: 100%;
     gap: 44px;
-    padding: 0px 195px 0px 195px;
     max-width: 1050px;
 
 
@@ -358,7 +361,7 @@ h5 {
 
 .hr-line {
     width: 100%;
-    max-width: 1057px;
+    max-width: 1057px; 
     border: 1px solid var(--line-color);
     margin: 0;
     padding: 0;
@@ -484,7 +487,10 @@ h5 {
 .footer__secondary {
     width: 100%;
     background-color: var(--secondary-color);
-    padding: 25px 0px
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__secondary--rights {
@@ -494,9 +500,149 @@ h5 {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.2px;
-    padding: 0px 234px 0px 234px;
+    
+}
+.footer__secondary--container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1050px;
 }
 
+/* STYLE VIDEO SECTION */
+.video-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+
+}
+.container__video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 80px 0px;
+    max-width: 880px;
+}
+/* STYLE CLIENT SAY SECTION */
+.client-say{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+
+}
+.container__client-say{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1050px;
+
+    }
+
+.client-say__card-wraper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    max-width: 257px;
+    padding: 30px 35px;
+    background-color: var(--light-text-color);
+    color: var(--second-text-color);
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid #DEDEDE;
+}
+.card-item__stars{
+    display: flex;
+}
+ 
+.heading-six{
+    font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.2px;
+
+}
+
+
+.client-photo{
+    grid-area: photo;
+}
+.client__fullName{
+    grid-area: name;
+}
+.client-prof{
+    grid-area: prof;
+}
+
+.card-item__client{
+    display: grid;
+    grid-template-areas: "photo name" "photo prof";
+    align-items: center;
+    justify-content: start;
+    column-gap: 10px;
+}
+.client__fullName{
+    color: var(--primary-color);
+    font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; 
+letter-spacing: 0.2px;
+}
+.client-prof{
+    color: var(--text-color);
+}
+
+
+/* STYLE OUR TEAM SECTION */
+.meet-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+.container__meet-team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1050px;
+}
+.team-wraper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+.team-wraper__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 328px;
+    background-color: var(--light-text-color);
+    color: var(--text-color);
+}
+.card-content{
+    /* display: grid;
+    grid-template-rows: auto auto; */
+    padding: 30px 30px;
+
+    text-align: center;
+}
 
 
 
