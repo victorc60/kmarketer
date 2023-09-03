@@ -637,14 +637,20 @@ letter-spacing: 0.2px;
     color: var(--text-color);
 }
 .card-content{
-    /* display: grid;
-    grid-template-rows: auto auto; */
+    display: grid;
+    gap: 5px;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
     padding: 30px 30px;
-
-    text-align: center;
+    justify-items: center;
 }
 
-
+.social-icon__wraper{
+    display: flex;
+    max-width: 100%;
+    gap: 10px;
+}
 
 @media screen and (max-width: 640px) {
 
