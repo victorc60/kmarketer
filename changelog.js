@@ -141,3 +141,79 @@ let  CalculationSupply = (currentAge, kgFood,maxYears)=>{
 CalculationSupply('3','1','50');
 CalculationSupply('4','10','55');
 CalculationSupply('5','20','65');
+
+
+
+// ARRAY TASK 1
+
+let fruits = [];
+fruits.push('apple');
+fruits.push('banana');
+fruits.push('orange');
+console.log(fruits.length);//
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+
+
+// ARRAY TASK 2 
+
+
+let numbers = [1, 2, 3, 4, 5]
+
+let removeNUMBERS = numbers.pop();
+console.log(removeNUMBERS);
+
+removeNUMBERS =numbers.shift();
+console.log(numbers);
+
+
+// ARRAY TASK3 
+
+let colors = ['red', 'green', 'blue', 'yellow'];
+console.log(colors.indexOf('green'));
+
+let hasOrange = colors.includes('orange');
+console.log(hasOrange);
+
+
+// ARRAYS TASK 4 
+
+let names = ['John','Jane', 'Mike', 'Jenifer'];
+names.unshift('David');
+console.log(names);
+
+
+console.log(names.indexOf('Mike'));
+
+// ARRAY TASK 5
+let newNumbers=[2,4,6,8,10];
+if (newNumbers.includes(5)){
+  console.log('Содержит данную цифру')
+}
+else{
+  console.log('Несодержит данную цифру')
+
+};
+
+newNumbers.push(12);
+console.log(newNumbers);
+
+
+// ARRAY TASK 6
+
+let months = ['january', 'february', 'march', 'april', 'may', 'june','july', 'august','september','october','november','december'];
+
+console.log(months.sort())
+
+
+const result = months.filter((word) => word.length > 3);
+console.log(result);
+
+const sliceResult = months.slice(5,10);
+console.log(sliceResult);
+
+const exEight = `String with months: ${months.filter((word) => word.length >= 5)}`
+console.log(exEight);
+
