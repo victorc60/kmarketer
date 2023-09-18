@@ -141,11 +141,3 @@ let  CalculationSupply = (currentAge, kgFood,maxYears)=>{
 CalculationSupply('3','1','50');
 CalculationSupply('4','10','55');
 CalculationSupply('5','20','65');
-
-
-
-
-
-
-
-
