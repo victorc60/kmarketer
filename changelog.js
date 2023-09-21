@@ -217,3 +217,137 @@ console.log(sliceResult);
 const exEight = `String with months: ${months.filter((word) => word.length >= 5)}`
 console.log(exEight);
 
+
+
+//////////////////// LESSON 18/////////////////// 
+
+// Task 1 
+let fruit = [ 'apple', 'banana', 'orange'];
+for(i = 0;i<fruit.length; i++){
+  console.log(fruit[i]);
+}
+
+// Task 2 
+numBers = [1, 2, 3, 4, 5];
+let sum=0;
+
+for(i=0; i<numBers.length; i++){
+    sum= sum + numBers[i];
+}
+console.log(sum);
+
+// Task 3 
+naMes = ['John', 'Jane', 'Mikhael', 'Jennifer', 'Bobby'];
+let nameLength = [];
+for(i=0; i < naMes.length; i++){
+  let numbersOfNames = naMes[i].length;
+  nameLength.push(numbersOfNames);
+}
+console.log(nameLength);
+
+
+// Task 4 
+let company = [
+              [1, 2, 3, 4],
+              ['ion', 'misha', 'petru', 'jenea', 'lesha', 'liza', 'vitea'],
+              ];
+
+
+let nameWorkers = company[1];
+
+for(i=0; i < nameWorkers.length; i++){
+  console.log(nameWorkers[i]);
+}
+
+let sortNamesWorkers = nameWorkers.sort();
+console.log(sortNamesWorkers);
+
+// Object 1 
+const persons = { name: 'John',
+                  surname: 'Doe', 
+                  age: 30, 
+                  profession: 'developer' 
+                }; 
+
+    const keys = Object.keys(persons);
+    console.log(keys.length);
+
+
+
+    // Object 2 
+    let n = 4;
+
+    let numberList = [...Array(n).keys()].map(i => i + 1);
+    console.log(numberList); 
+
+
+    // Object 3 
+   
+    const arrayValues = [5, 8, 2, 10, 3];
+    let bigOne= 0;
+    
+    for(let i=0; i <=arrayValues.length; i++){
+      if(arrayValues[i]>=bigOne){
+        bigOne=arrayValues[i];
+      }
+    }
+    console.log(bigOne);
+         
+    
+
+// Object 4 
+let marks = { math: 8, 
+              literature: 7, 
+              history: 9 };
+
+
+  function averegeMarksF(){            
+        let sumOfMarks = 0;
+        let marksValues=Object.values(marks);
+
+        console.log(marksValues);
+
+
+        for(i=0; i < marksValues.length; i++){
+          sumOfMarks= marksValues[i]+sumOfMarks;
+        }
+        console.log(sumOfMarks);
+
+
+        let averegeMark = sumOfMarks / marksValues.length;
+        console.log(averegeMark);
+  };
+
+  averegeMarksF();
+
+  // Object 5 
+
+
+ 
+  function Dog(nickname, age, color) {
+    this.name = nickname
+    this.age = age
+    this.color = color
+    this.puppiesNames = [];
+}
+
+  function addPuppies(dog, puppiesNumber) {
+    for (let i = 1; i <= puppiesNumber; i++) {
+        dog.puppiesNames.push("Puppy" + i);
+    }
+console.log(myDog)
+}
+
+let myDog = new Dog("Jack", 5, "black");
+
+addPuppies(myDog, 5);
+
+
+
+  
+
+
+
+
+
+

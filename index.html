@@ -120,10 +120,14 @@
                 <p class="choose-us__heading--paragr"> the two major realms of Classical physics: Newtonian mechanics</p>
             </div>
             <div class="container__video--player">
-                <video  controls>
+                <video class="video-play"  controls>
                     <source  src="video/work_space_-_3132%20(720p).mp4" type="video/mp4">
                     Your browser does not support HTML video.
-                  </video>
+                </video>
+                
+                    <img class="play-btn" style="display: none;" src="img/icn play .icn-sm.svg" alt="">
+                
+                
             </div>
         </div>
 
@@ -265,6 +269,53 @@
                             </a>
                         </div>
                         </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-us">
+        <div class="container__contact-us">
+            <div class="contact-us__card">
+                <div class="header__container--contact-us">
+                    <h5 class="heading-five">Contact us</h5>
+                    <h2 class="heading--two">Make an Appoinment</h2>
+                </div>
+                <form class="contact-us__form" action="#">
+                    <input class="input-form fullName" type="text" placeholder="Enter Full Name">
+                    <input class="input-form email"  type="email" placeholder="example@gmail.com">
+
+                    <select class="input-form selectPlease" style="max-width: 291px;" name="please" id="pls">
+                        <option value="1">Example1</option>
+                        <option value="2">Example2</option>
+                        <option value="3">Example3</option>
+                        <option value="4">Example4</option>
+                    </select>
+                    <select class="input-form selectTime" style="max-width: 291px;" name="please" id="pls">
+                        <option value="1">4:00 Avalible</option>
+                        <option value="2">6:00 Avalible</option>
+                        <option value="3">8:00 Avalible</option>
+                        <option value="4">10:00 Avalible</option>
+                    </select>
+
+                    <textarea class="input-form message" name="message" id="message" cols="30" rows="10">Message</textarea>
+                </form> 
+
+                <button class="submit-button">
+                    Book Appoinment
+                </button>
+                
+            </div>
+        </div>
+    </section>
+    <section class="call-us">
+        <div class="call-us__container">
+            <div class="heading">
+                <h3 class="heading-three">Consulting Agency For Your Business</h3>
+                <p class="call-us__pharagr">the quick fox jumps over the lazy dog</p>
+            </div>
+            <div class="call-us__button">
+                <div class="submit-button">
+                    Contact Us
                 </div>
             </div>
         </div>
