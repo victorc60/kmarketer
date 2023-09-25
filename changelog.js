@@ -344,8 +344,155 @@ addPuppies(myDog, 5);
 
 
 
-  
+// LESSON 19
+console.log('/////////LESSON 19//////////')
 
+// Task 1
+let personality = {
+  name: 'John',
+  age: 30,
+  city: 'New-York'
+}
+function info(user) {
+  let keys = Object.keys(user);
+  let i19 = 0;
+  while(i19 < keys.length) {
+      let key = keys[i19];
+      console.log(`${key}: ${user[key]}`);
+      i19++;
+  }
+} 
+info(personality); 
+
+// Task 2 
+
+let user19 = { name: 'John', age: 30, city: 'New-York' };
+let key19 = 'age'; 
+ function searchKey(object19, key19){
+
+for(let x in object19){
+    if(x == key19){
+      return true
+    }
+}
+ }
+ console.log(searchKey(user19,key19))
+
+
+//  Task3 
+
+let phrase = {
+  prop1: 'Hello',
+  prop2: 'World',
+  prop3: '!'
+}
+function concatWords(obj19) {
+  let newPhrase = '';
+  let keys = Object.keys(obj19);
+  let i = 0;
+  do{
+      let key = keys[i];
+      let value = obj19[key];
+      newPhrase += value;
+      i++;
+  } while (i < keys.length);
+  return newPhrase;
+}  
+console.log(concatWords(phrase));
+
+
+// Task 4 
+
+let string19 = 'Hello world, my name is Albert'
+
+function vowels(stringDefault) {
+  if (typeof stringDefault === 'string') {  
+    let lowerString = stringDefault.toLowerCase();
+    let vowelsList = ['a','e','i','o','u','y'];
+    let vowelsCount = 0;
+    let i = 0;
+    while(i < stringDefault.length) {
+        let stringValue = lowerString[i];
+        if(vowelsList.includes(stringValue)){
+            vowelsCount ++;
+        }
+        i++
+    }
+    return vowelsCount;
+  } else {
+    console.error('Wrong format');
+  }
+}
+console.log(vowels(string19));
+
+// Task 5 
+let students19 = { John: [8, 7, 9], Mary: [9, 9, 10], Alex: [6, 8, 7] }
+
+
+
+
+
+function getAverageScore(scores){
+  let averageScore = Object.assign({},scores);
+
+    for (Element in scores) {
+
+        let value = scores[Element];
+
+        let i = 0;
+        let sum = 0;
+        let arrayLength = value.length;
+
+        while (i < arrayLength) {
+            sum += value[i];
+            i++;
+        }
+        let medium = sum / arrayLength;
+        averageScore[Element] = `medium: ${medium}`;
+    }
+    return averageScore;
+};
+console.log(getAverageScore(students19))
+
+
+// Task 6 
+
+
+
+let initialString = 'Hello, world!';
+
+function reverseString(string) {
+  let stringArray = string.split('');
+  let newStringArray = [];
+
+  let newString = newStringArray.join('');
+  let i = stringArray.length;
+  do{
+      i--;
+      newString += stringArray[i];
+  } while (i > 0);
+  return newString;
+}
+console.log(reverseString(initialString));
+
+// Task 7 
+
+
+let polindrome = 'level';
+
+function checkPolindrome(inputString){
+  reverseString(inputString);
+  let reversePolindrome = reverseString(inputString);
+
+if(polindrome === reversePolindrome){
+  console.log(true);
+}
+else{
+  console.log('not polindrome');
+}
+}
+
+checkPolindrome(polindrome);
 
 
 
