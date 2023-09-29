@@ -496,5 +496,76 @@ checkPolindrome(polindrome);
 
 
 
+console.log('LESSON 20!');
+
+// TASK1
+const studentGrades = [
+  { name: "Anna", note: 9 },
+  { name: "Denis", note: 7 },
+  { name: "Cristian", note: 8 },
+  { name: "Daniel", note: 6 },
+  { name: "Elena", note: 10 }
+];
+
+const reducer = studentGrades.reduce((acc, val)=>{
+ 
+  return acc + val.note;
+  },0
+)
+console.log(reducer/studentGrades.length);
+
+// TASK2
+
+const products = [
+  {name: "Tshirt", price: 50, isAvailable: true },
+  {name: "Pants", price: 80, isAvailable: false },
+  {name: "Jacket", price: 120, isAvailable: true },
+  {name: "Shirt", price: 60, isAvailable: true },
+  {name: "Skirt", price: 40, isAvailable: false }
+];
+
+const inStock = products.filter(product=>product.isAvailable).map(product=> product.name)
+console.log(inStock);
+
+// Task 3 
+
+const numbersArray =  [10, 5, 8, 15, 3, 20];
+ let maxNumber = numbersArray.reduce((acc, val)=>{
+if(acc>val){
+  return acc;
+}
+else {
+  return val;
+}
+ },numbersArray[0])
+ console.log(maxNumber);
+
+//  Task 4 
 
 
+
+function calculateAverageMarks(students) {
+  const result = {};
+
+  students.forEach(student => {
+    const studentName = Object.keys(student)[0]; // Получаем имя ученика
+    const marks = student[studentName]; // Получаем массив оценок
+    g
+    // Вычисляем средний балл для ученика
+    const averageMark = marks.reduce((sum, mark) => sum + mark, 0) / marks.length;
+
+    // Записываем имя ученика и средний балл в объект result
+    result[studentName] = averageMark;
+  });
+
+  return result;
+}
+
+const studentMarks = [
+  { John: [8, 7, 9] },
+  { Mary: [9, 9, 10] },
+  { Alex: [6, 8, 7] }
+];
+
+const averageMarks = calculateAverageMarks(studentMarks);
+console.log(averageMarks);
