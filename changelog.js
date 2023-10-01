@@ -548,13 +548,11 @@ function calculateAverageMarks(students) {
   const result = {};
 
   students.forEach(student => {
-    const studentName = Object.keys(student)[0]; // Получаем имя ученика
-    const marks = student[studentName]; // Получаем массив оценок
-    g
-    // Вычисляем средний балл для ученика
+    const studentName = Object.keys(student)[0]; 
+    const marks = student[studentName]; 
+    
     const averageMark = marks.reduce((sum, mark) => sum + mark, 0) / marks.length;
 
-    // Записываем имя ученика и средний балл в объект result
     result[studentName] = averageMark;
   });
 
@@ -569,3 +567,160 @@ const studentMarks = [
 
 const averageMarks = calculateAverageMarks(studentMarks);
 console.log(averageMarks);
+
+
+console.log('LESSON 21');
+// Task 1 
+
+let student21 = {
+    name: 'John',
+    lastName: 'Doe',
+    faculty: 'history',
+    year: 3
+};
+
+const arrayOfStudent = (obj21)=>{
+  const {name, lastName, faculty,year}= student21;
+
+  const arrayForStudent = [];
+  let fullName21 = name + ' ' + lastName;
+
+  arrayForStudent.push(fullName21, faculty,year);
+
+  return arrayForStudent;
+
+}
+let result21 = arrayOfStudent(student21);
+console.log(result21);
+
+// Task 2 
+
+const colors21 = ['red', 'green', 'blue', 'violet']
+
+
+const returnElements=(array21)=>{
+   const [el1, , el3]= array21;
+  console.log(el1);
+  console.log(el3);
+}
+
+let returnEl = returnElements(colors21);
+
+// Task 3 
+
+const arrayOfNumbers = [1,2,3,4,56,7,8,9,6,3,324,321,124,56,75]
+
+function returnNumbers(arrayNum){
+  const [...rest] = arrayNum
+  console.log(rest);
+}
+returnNumbers(arrayOfNumbers);
+
+// Task 4 
+const arrayName = ['Ion', 'Petea', 'Tolik','Vasea'];
+const arrayNum21 = [21, 92, 23,54];
+
+function getTogether(arr1,arr2){
+  let newArray21 = [...arr1,...arr2];
+  console.log(newArray21);
+}
+getTogether(arrayName,arrayNum21);
+
+// Task5 
+
+let newParametr = {language: 'English'}
+
+
+function addParametr(par1, par2){
+
+const newStudent21={...par1,...par2}
+console.log(newStudent21);
+
+}
+addParametr(student21,newParametr);
+
+
+// Task6 
+
+
+
+let input21 = 'did';
+
+function newString(inputString){
+  const duplicates = [];
+  const singleTime = [];
+  const encounteredLetters = {}; 
+
+  const lowercasedString = inputString.toLowerCase();
+
+  for (let i = 0; i < lowercasedString.length; i++) {
+    const letter = lowercasedString[i]; 
+
+    if (encounteredLetters[letter])  { //не совсем понял как эта строчка работает
+      duplicates.push(letter);
+    } else {
+      encounteredLetters[letter] = true;
+      singleTime.push(letter);
+    }
+  }
+
+  return { duplicates, singleTime };
+}
+const inputString = "recede";
+const { duplicates, singleTime } = newString(inputString);
+console.log("Повторяющиеся буквы:", duplicates); 
+console.log("Неповторяющиеся буквы:", singleTime);
+
+newString(input21);
+
+function makeBracket() {
+  let letter21= {};
+  let finArray= [];
+
+  for(let i = 0; i<inputString.length; i++)
+  {
+    let item21 = inputString[i];
+    if(letter21[item21]){
+      finArray.push(')');
+    }
+    else{
+      letter21[item21]= true;
+      finArray.push('(')
+    }
+  }
+  console.log(finArray);
+
+
+
+}
+makeBracket(inputString);
+
+// // Task 7
+let arrayNum7= [2,4,6,8,10,3]
+
+function checkNumber(array7){
+  let evenCount = [];
+  let oddCount = [];
+  
+  for(let i = 0; i<array7.length;i++){
+    if(array7[i] %2 ===0){
+      evenCount.push(array7[i])
+    }
+    else{
+      oddCount.push(array7[i])
+    }
+  }
+  if(evenCount.length<oddCount.length){
+    console.log(evenCount);
+  }
+  else{
+    console.log(oddCount);
+  }
+}
+checkNumber(arrayNum7)
+
+
+
+
+
+
