@@ -344,7 +344,380 @@ addPuppies(myDog, 5);
 
 
 
+// LESSON 19
+console.log('/////////LESSON 19//////////')
+
+// Task 1
+let personality = {
+  name: 'John',
+  age: 30,
+  city: 'New-York'
+}
+function info(user) {
+  let keys = Object.keys(user);
+  let i19 = 0;
+  while(i19 < keys.length) {
+      let key = keys[i19];
+      console.log(`${key}: ${user[key]}`);
+      i19++;
+  }
+} 
+info(personality); 
+
+// Task 2 
+
+let user19 = { name: 'John', age: 30, city: 'New-York' };
+let key19 = 'age'; 
+ function searchKey(object19, key19){
+
+for(let x in object19){
+    if(x == key19){
+      return true
+    }
+}
+ }
+ console.log(searchKey(user19,key19))
+
+
+//  Task3 
+
+let phrase = {
+  prop1: 'Hello',
+  prop2: 'World',
+  prop3: '!'
+}
+function concatWords(obj19) {
+  let newPhrase = '';
+  let keys = Object.keys(obj19);
+  let i = 0;
+  do{
+      let key = keys[i];
+      let value = obj19[key];
+      newPhrase += value;
+      i++;
+  } while (i < keys.length);
+  return newPhrase;
+}  
+console.log(concatWords(phrase));
+
+
+// Task 4 
+
+let string19 = 'Hello world, my name is Albert'
+
+function vowels(stringDefault) {
+  if (typeof stringDefault === 'string') {  
+    let lowerString = stringDefault.toLowerCase();
+    let vowelsList = ['a','e','i','o','u','y'];
+    let vowelsCount = 0;
+    let i = 0;
+    while(i < stringDefault.length) {
+        let stringValue = lowerString[i];
+        if(vowelsList.includes(stringValue)){
+            vowelsCount ++;
+        }
+        i++
+    }
+    return vowelsCount;
+  } else {
+    console.error('Wrong format');
+  }
+}
+console.log(vowels(string19));
+
+// Task 5 
+let students19 = { John: [8, 7, 9], Mary: [9, 9, 10], Alex: [6, 8, 7] }
+
+
+
+
+
+function getAverageScore(scores){
+  let averageScore = Object.assign({},scores);
+
+    for (Element in scores) {
+
+        let value = scores[Element];
+
+        let i = 0;
+        let sum = 0;
+        let arrayLength = value.length;
+
+        while (i < arrayLength) {
+            sum += value[i];
+            i++;
+        }
+        let medium = sum / arrayLength;
+        averageScore[Element] = `medium: ${medium}`;
+    }
+    return averageScore;
+};
+console.log(getAverageScore(students19))
+
+
+// Task 6 
+
+
+
+let initialString = 'Hello, world!';
+
+function reverseString(string) {
+  let stringArray = string.split('');
+  let newStringArray = [];
+
+  let newString = newStringArray.join('');
+  let i = stringArray.length;
+  do{
+      i--;
+      newString += stringArray[i];
+  } while (i > 0);
+  return newString;
+}
+console.log(reverseString(initialString));
+
+// Task 7 
+
+
+let polindrome = 'level';
+
+function checkPolindrome(inputString){
+  reverseString(inputString);
+  let reversePolindrome = reverseString(inputString);
+
+if(polindrome === reversePolindrome){
+  console.log(true);
+}
+else{
+  console.log('not polindrome');
+}
+}
+
+checkPolindrome(polindrome);
+
+
+
+console.log('LESSON 20!');
+
+// TASK1
+const studentGrades = [
+  { name: "Anna", note: 9 },
+  { name: "Denis", note: 7 },
+  { name: "Cristian", note: 8 },
+  { name: "Daniel", note: 6 },
+  { name: "Elena", note: 10 }
+];
+
+const reducer = studentGrades.reduce((acc, val)=>{
+ 
+  return acc + val.note;
+  },0
+)
+console.log(reducer/studentGrades.length);
+
+// TASK2
+
+const products = [
+  {name: "Tshirt", price: 50, isAvailable: true },
+  {name: "Pants", price: 80, isAvailable: false },
+  {name: "Jacket", price: 120, isAvailable: true },
+  {name: "Shirt", price: 60, isAvailable: true },
+  {name: "Skirt", price: 40, isAvailable: false }
+];
+
+const inStock = products.filter(product=>product.isAvailable).map(product=> product.name)
+console.log(inStock);
+
+// Task 3 
+
+const numbersArray =  [10, 5, 8, 15, 3, 20];
+ let maxNumber = numbersArray.reduce((acc, val)=>{
+if(acc>val){
+  return acc;
+}
+else {
+  return val;
+}
+ },numbersArray[0])
+ console.log(maxNumber);
+
+//  Task 4 
+
+
+
+function calculateAverageMarks(students) {
+  const result = {};
+
+  students.forEach(student => {
+    const studentName = Object.keys(student)[0]; 
+    const marks = student[studentName]; 
+    
+    const averageMark = marks.reduce((sum, mark) => sum + mark, 0) / marks.length;
+
+    result[studentName] = averageMark;
+  });
+
+  return result;
+}
+
+const studentMarks = [
+  { John: [8, 7, 9] },
+  { Mary: [9, 9, 10] },
+  { Alex: [6, 8, 7] }
+];
+
+const averageMarks = calculateAverageMarks(studentMarks);
+console.log(averageMarks);
+
+
+console.log('LESSON 21');
+// Task 1 
+
+let student21 = {
+    name: 'John',
+    lastName: 'Doe',
+    faculty: 'history',
+    year: 3
+};
+
+const arrayOfStudent = (obj21)=>{
+  const {name, lastName, faculty,year}= student21;
+
+  const arrayForStudent = [];
+  let fullName21 = name + ' ' + lastName;
+
+  arrayForStudent.push(fullName21, faculty,year);
+
+  return arrayForStudent;
+
+}
+let result21 = arrayOfStudent(student21);
+console.log(result21);
+
+// Task 2 
+
+const colors21 = ['red', 'green', 'blue', 'violet']
+
+
+const returnElements=(array21)=>{
+   const [el1, , el3]= array21;
+  console.log(el1);
+  console.log(el3);
+}
+
+let returnEl = returnElements(colors21);
+
+// Task 3 
+
+const arrayOfNumbers = [1,2,3,4,56,7,8,9,6,3,324,321,124,56,75]
+
+function returnNumbers(arrayNum){
+  const [...rest] = arrayNum
+  console.log(rest);
+}
+returnNumbers(arrayOfNumbers);
+
+// Task 4 
+const arrayName = ['Ion', 'Petea', 'Tolik','Vasea'];
+const arrayNum21 = [21, 92, 23,54];
+
+function getTogether(arr1,arr2){
+  let newArray21 = [...arr1,...arr2];
+  console.log(newArray21);
+}
+getTogether(arrayName,arrayNum21);
+
+// Task5 
+
+let newParametr = {language: 'English'}
+
+
+function addParametr(par1, par2){
+
+const newStudent21={...par1,...par2}
+console.log(newStudent21);
+
+}
+addParametr(student21,newParametr);
+
+
+// Task6 
+
+
+
+let input21 = 'did';
+
+function newString(inputString){
+  const duplicates = [];
+  const singleTime = [];
+  const encounteredLetters = {}; 
+
+  const lowercasedString = inputString.toLowerCase();
+
+  for (let i = 0; i < lowercasedString.length; i++) {
+    const letter = lowercasedString[i]; 
+
+    if (encounteredLetters[letter])  { //не совсем понял как эта строчка работает
+      duplicates.push(letter);
+    } else {
+      encounteredLetters[letter] = true;
+      singleTime.push(letter);
+    }
+  }
+
+  return { duplicates, singleTime };
+}
+const inputString = "recede";
+const { duplicates, singleTime } = newString(inputString);
+console.log("Повторяющиеся буквы:", duplicates); 
+console.log("Неповторяющиеся буквы:", singleTime);
+
+newString(input21);
+
+function makeBracket() {
+  let letter21= {};
+  let finArray= [];
+
+  for(let i = 0; i<inputString.length; i++)
+  {
+    let item21 = inputString[i];
+    if(letter21[item21]){
+      finArray.push(')');
+    }
+    else{
+      letter21[item21]= true;
+      finArray.push('(')
+    }
+  }
+  console.log(finArray);
+
+
+
+}
+makeBracket(inputString);
+
+// // Task 7
+let arrayNum7= [2,4,6,8,10,3]
+
+function checkNumber(array7){
+  let evenCount = [];
+  let oddCount = [];
   
+  for(let i = 0; i<array7.length;i++){
+    if(array7[i] %2 ===0){
+      evenCount.push(array7[i])
+    }
+    else{
+      oddCount.push(array7[i])
+    }
+  }
+  if(evenCount.length<oddCount.length){
+    console.log(evenCount);
+  }
+  else{
+    console.log(oddCount);
+  }
+}
+checkNumber(arrayNum7)
 
 
 
