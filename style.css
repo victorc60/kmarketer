@@ -695,25 +695,29 @@ letter-spacing: 0.1px;
     justify-content: start;
     max-width: 1050px;
     width: 100%;
-    padding: 50px 10px;
+    padding: 50px 0px;
 }
 .contact-us__card{
-    padding: 40px 0px;
+    padding: 40px 15px;
     max-width: 602px;
     width: 100%;
 }
+
 .input-form{
     text-align: start;
     color: var(--second-text-color);
     font-weight: 500;
     padding: 15px 20px; 
-    max-width: 290px;
+    width: 90%;
     border-radius: 5px;
     border: none;
-
-
-
 }
+.input-wraper{
+
+
+    max-width: 290px;
+}
+
 
 .message{
     text-align: start;
@@ -722,7 +726,12 @@ letter-spacing: 0.1px;
     max-width: 602px;
 }
     
+.header__container--contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
+}
 .contact-us__form{
     display: grid;
     max-width: 602px;
@@ -780,12 +789,12 @@ letter-spacing: 0.1px;
     width: 100%;
     padding-right: 15px;
 }
-.heading{
+/* .heading{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-}
+} */
 .call-us__pharagr{
     font-size: 14px;
     font-weight: 600;
