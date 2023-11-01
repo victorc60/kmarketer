@@ -1,0 +1,20 @@
+
+[
+    {
+        "name": "Ashley Fletcher ",
+        "position": "CEO",
+        "phone": "+12345678"
+      },
+      
+      {
+        "name": "Rodney Stratton",
+        "position": "Consultant",
+        "phone": "+12345678"
+      },
+
+      {
+        "name": "Avie Beaton",
+        "position": "CO Founder",
+        "phone": "+12345678"
+       }
+    ]
