@@ -717,7 +717,11 @@ function checkNumber(array7){
     console.log(oddCount);
   }
 }
-checkNumber(arrayNum7)
+checkNumber(arrayNum7);
+
+
+// Freestyle 
+let styleFor
 
 
 
