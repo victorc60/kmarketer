@@ -576,8 +576,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"bB7Pu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _swiper = require("swiper");
-var _swiperDefault = parcelHelpers.interopDefault(_swiper);
+var _bundle = require("swiper/bundle");
+var _bundleDefault = parcelHelpers.interopDefault(_bundle);
 var _modules = require("swiper/modules");
 // import Swiper and modules styles
 var _css = require("swiper/css");
@@ -592,58 +592,54 @@ const selectTwo = document.getElementById("select2");
 const textArea = document.getElementById("message");
 const notify = document.getElementById("notify");
 const heads = document.querySelector(".heading--two");
-var swiper = new (0, _swiperDefault.default)(".mySwiper", {
+new (0, _bundleDefault.default)(".mySwiper", {
     modules: [
         (0, _modules.Navigation),
         (0, _modules.Pagination)
     ],
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
-    slidesPerView: 1,
     breakpoints: {
-        640: {
+        320: {
             slidesPerView: 1
         },
-        768: {
+        480: {
             slidesPerView: 2,
             spaceBetween: 10
         },
-        1024: {
+        600: {
             slidesPerView: 3,
             spaceBetween: 20
         }
-    }
-});
-var swiper = new (0, _swiperDefault.default)(".mySwiper2", {
-    modules: [
-        (0, _modules.Navigation),
-        (0, _modules.Pagination),
-        (0, _modules.Autoplay)
-    ],
-    spaceBetween: 100,
-    slidesPerView: 1,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
-    }
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    slidesPerView: 1
 });
+// var swiper = new Swiper(".mySwiper2", {
+//   modules: [Navigation, Pagination, Autoplay],
+//   spaceBetween: 100,
+//   slidesPerView: 1,
+//   loop: true,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
 function succes(el) {
     el.classList.add("succes");
     el.classList.remove("error");
@@ -839,7 +835,7 @@ async function getPosts() {
 // }
 }
 
-},{"swiper":"iM6UL","swiper/modules":"9ktz6","swiper/css":"dGmMB","swiper/css/navigation":"ae55e","swiper/css/pagination":"lT27W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iM6UL":[function(require,module,exports) {
+},{"swiper/bundle":"a3TYD","swiper/modules":"9ktz6","swiper/css":"dGmMB","swiper/css/navigation":"ae55e","swiper/css/pagination":"lT27W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a3TYD":[function(require,module,exports) {
 /**
  * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -855,8 +851,81 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Swiper", ()=>(0, _swiperCoreMjs.S));
 parcelHelpers.export(exports, "default", ()=>(0, _swiperCoreMjs.S));
 var _swiperCoreMjs = require("./shared/swiper-core.mjs");
+var _virtualMjs = require("./modules/virtual.mjs");
+var _virtualMjsDefault = parcelHelpers.interopDefault(_virtualMjs);
+var _keyboardMjs = require("./modules/keyboard.mjs");
+var _keyboardMjsDefault = parcelHelpers.interopDefault(_keyboardMjs);
+var _mousewheelMjs = require("./modules/mousewheel.mjs");
+var _mousewheelMjsDefault = parcelHelpers.interopDefault(_mousewheelMjs);
+var _navigationMjs = require("./modules/navigation.mjs");
+var _navigationMjsDefault = parcelHelpers.interopDefault(_navigationMjs);
+var _paginationMjs = require("./modules/pagination.mjs");
+var _paginationMjsDefault = parcelHelpers.interopDefault(_paginationMjs);
+var _scrollbarMjs = require("./modules/scrollbar.mjs");
+var _scrollbarMjsDefault = parcelHelpers.interopDefault(_scrollbarMjs);
+var _parallaxMjs = require("./modules/parallax.mjs");
+var _parallaxMjsDefault = parcelHelpers.interopDefault(_parallaxMjs);
+var _zoomMjs = require("./modules/zoom.mjs");
+var _zoomMjsDefault = parcelHelpers.interopDefault(_zoomMjs);
+var _controllerMjs = require("./modules/controller.mjs");
+var _controllerMjsDefault = parcelHelpers.interopDefault(_controllerMjs);
+var _a11YMjs = require("./modules/a11y.mjs");
+var _a11YMjsDefault = parcelHelpers.interopDefault(_a11YMjs);
+var _historyMjs = require("./modules/history.mjs");
+var _historyMjsDefault = parcelHelpers.interopDefault(_historyMjs);
+var _hashNavigationMjs = require("./modules/hash-navigation.mjs");
+var _hashNavigationMjsDefault = parcelHelpers.interopDefault(_hashNavigationMjs);
+var _autoplayMjs = require("./modules/autoplay.mjs");
+var _autoplayMjsDefault = parcelHelpers.interopDefault(_autoplayMjs);
+var _thumbsMjs = require("./modules/thumbs.mjs");
+var _thumbsMjsDefault = parcelHelpers.interopDefault(_thumbsMjs);
+var _freeModeMjs = require("./modules/free-mode.mjs");
+var _freeModeMjsDefault = parcelHelpers.interopDefault(_freeModeMjs);
+var _gridMjs = require("./modules/grid.mjs");
+var _gridMjsDefault = parcelHelpers.interopDefault(_gridMjs);
+var _manipulationMjs = require("./modules/manipulation.mjs");
+var _manipulationMjsDefault = parcelHelpers.interopDefault(_manipulationMjs);
+var _effectFadeMjs = require("./modules/effect-fade.mjs");
+var _effectFadeMjsDefault = parcelHelpers.interopDefault(_effectFadeMjs);
+var _effectCubeMjs = require("./modules/effect-cube.mjs");
+var _effectCubeMjsDefault = parcelHelpers.interopDefault(_effectCubeMjs);
+var _effectFlipMjs = require("./modules/effect-flip.mjs");
+var _effectFlipMjsDefault = parcelHelpers.interopDefault(_effectFlipMjs);
+var _effectCoverflowMjs = require("./modules/effect-coverflow.mjs");
+var _effectCoverflowMjsDefault = parcelHelpers.interopDefault(_effectCoverflowMjs);
+var _effectCreativeMjs = require("./modules/effect-creative.mjs");
+var _effectCreativeMjsDefault = parcelHelpers.interopDefault(_effectCreativeMjs);
+var _effectCardsMjs = require("./modules/effect-cards.mjs");
+var _effectCardsMjsDefault = parcelHelpers.interopDefault(_effectCardsMjs);
+// Swiper Class
+const modules = [
+    (0, _virtualMjsDefault.default),
+    (0, _keyboardMjsDefault.default),
+    (0, _mousewheelMjsDefault.default),
+    (0, _navigationMjsDefault.default),
+    (0, _paginationMjsDefault.default),
+    (0, _scrollbarMjsDefault.default),
+    (0, _parallaxMjsDefault.default),
+    (0, _zoomMjsDefault.default),
+    (0, _controllerMjsDefault.default),
+    (0, _a11YMjsDefault.default),
+    (0, _historyMjsDefault.default),
+    (0, _hashNavigationMjsDefault.default),
+    (0, _autoplayMjsDefault.default),
+    (0, _thumbsMjsDefault.default),
+    (0, _freeModeMjsDefault.default),
+    (0, _gridMjsDefault.default),
+    (0, _manipulationMjsDefault.default),
+    (0, _effectFadeMjsDefault.default),
+    (0, _effectCubeMjsDefault.default),
+    (0, _effectFlipMjsDefault.default),
+    (0, _effectCoverflowMjsDefault.default),
+    (0, _effectCreativeMjsDefault.default),
+    (0, _effectCardsMjsDefault.default)
+];
+(0, _swiperCoreMjs.S).use(modules);
 
-},{"./shared/swiper-core.mjs":"c1Vcv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1Vcv":[function(require,module,exports) {
+},{"./shared/swiper-core.mjs":"c1Vcv","./modules/virtual.mjs":"lnC23","./modules/keyboard.mjs":"6aaP5","./modules/mousewheel.mjs":"eTnkH","./modules/navigation.mjs":"lJ4k2","./modules/pagination.mjs":"9u1CB","./modules/scrollbar.mjs":"cciA8","./modules/parallax.mjs":"eHHIn","./modules/zoom.mjs":"ltxjG","./modules/controller.mjs":"aycgc","./modules/a11y.mjs":"eyTe1","./modules/history.mjs":"1zK9H","./modules/hash-navigation.mjs":"efrWr","./modules/autoplay.mjs":"1BZT7","./modules/thumbs.mjs":"1je3m","./modules/free-mode.mjs":"9Zce7","./modules/grid.mjs":"gFqWO","./modules/manipulation.mjs":"egSSj","./modules/effect-fade.mjs":"7xOD5","./modules/effect-cube.mjs":"bYTjs","./modules/effect-flip.mjs":"kq7Ix","./modules/effect-coverflow.mjs":"i291F","./modules/effect-creative.mjs":"3xLMe","./modules/effect-cards.mjs":"5uuhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1Vcv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "S", ()=>Swiper);
@@ -4281,80 +4350,7 @@ function elementOuterSize(el, size, includeMargins) {
     return el.offsetWidth;
 }
 
-},{"./ssr-window.esm.mjs":"th8PY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ktz6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Virtual", ()=>(0, _virtualMjsDefault.default));
-parcelHelpers.export(exports, "Keyboard", ()=>(0, _keyboardMjsDefault.default));
-parcelHelpers.export(exports, "Mousewheel", ()=>(0, _mousewheelMjsDefault.default));
-parcelHelpers.export(exports, "Navigation", ()=>(0, _navigationMjsDefault.default));
-parcelHelpers.export(exports, "Pagination", ()=>(0, _paginationMjsDefault.default));
-parcelHelpers.export(exports, "Scrollbar", ()=>(0, _scrollbarMjsDefault.default));
-parcelHelpers.export(exports, "Parallax", ()=>(0, _parallaxMjsDefault.default));
-parcelHelpers.export(exports, "Zoom", ()=>(0, _zoomMjsDefault.default));
-parcelHelpers.export(exports, "Controller", ()=>(0, _controllerMjsDefault.default));
-parcelHelpers.export(exports, "A11y", ()=>(0, _a11YMjsDefault.default));
-parcelHelpers.export(exports, "History", ()=>(0, _historyMjsDefault.default));
-parcelHelpers.export(exports, "HashNavigation", ()=>(0, _hashNavigationMjsDefault.default));
-parcelHelpers.export(exports, "Autoplay", ()=>(0, _autoplayMjsDefault.default));
-parcelHelpers.export(exports, "Thumbs", ()=>(0, _thumbsMjsDefault.default));
-parcelHelpers.export(exports, "FreeMode", ()=>(0, _freeModeMjsDefault.default));
-parcelHelpers.export(exports, "Grid", ()=>(0, _gridMjsDefault.default));
-parcelHelpers.export(exports, "Manipulation", ()=>(0, _manipulationMjsDefault.default));
-parcelHelpers.export(exports, "EffectFade", ()=>(0, _effectFadeMjsDefault.default));
-parcelHelpers.export(exports, "EffectCube", ()=>(0, _effectCubeMjsDefault.default));
-parcelHelpers.export(exports, "EffectFlip", ()=>(0, _effectFlipMjsDefault.default));
-parcelHelpers.export(exports, "EffectCoverflow", ()=>(0, _effectCoverflowMjsDefault.default));
-parcelHelpers.export(exports, "EffectCreative", ()=>(0, _effectCreativeMjsDefault.default));
-parcelHelpers.export(exports, "EffectCards", ()=>(0, _effectCardsMjsDefault.default));
-var _virtualMjs = require("./virtual.mjs");
-var _virtualMjsDefault = parcelHelpers.interopDefault(_virtualMjs);
-var _keyboardMjs = require("./keyboard.mjs");
-var _keyboardMjsDefault = parcelHelpers.interopDefault(_keyboardMjs);
-var _mousewheelMjs = require("./mousewheel.mjs");
-var _mousewheelMjsDefault = parcelHelpers.interopDefault(_mousewheelMjs);
-var _navigationMjs = require("./navigation.mjs");
-var _navigationMjsDefault = parcelHelpers.interopDefault(_navigationMjs);
-var _paginationMjs = require("./pagination.mjs");
-var _paginationMjsDefault = parcelHelpers.interopDefault(_paginationMjs);
-var _scrollbarMjs = require("./scrollbar.mjs");
-var _scrollbarMjsDefault = parcelHelpers.interopDefault(_scrollbarMjs);
-var _parallaxMjs = require("./parallax.mjs");
-var _parallaxMjsDefault = parcelHelpers.interopDefault(_parallaxMjs);
-var _zoomMjs = require("./zoom.mjs");
-var _zoomMjsDefault = parcelHelpers.interopDefault(_zoomMjs);
-var _controllerMjs = require("./controller.mjs");
-var _controllerMjsDefault = parcelHelpers.interopDefault(_controllerMjs);
-var _a11YMjs = require("./a11y.mjs");
-var _a11YMjsDefault = parcelHelpers.interopDefault(_a11YMjs);
-var _historyMjs = require("./history.mjs");
-var _historyMjsDefault = parcelHelpers.interopDefault(_historyMjs);
-var _hashNavigationMjs = require("./hash-navigation.mjs");
-var _hashNavigationMjsDefault = parcelHelpers.interopDefault(_hashNavigationMjs);
-var _autoplayMjs = require("./autoplay.mjs");
-var _autoplayMjsDefault = parcelHelpers.interopDefault(_autoplayMjs);
-var _thumbsMjs = require("./thumbs.mjs");
-var _thumbsMjsDefault = parcelHelpers.interopDefault(_thumbsMjs);
-var _freeModeMjs = require("./free-mode.mjs");
-var _freeModeMjsDefault = parcelHelpers.interopDefault(_freeModeMjs);
-var _gridMjs = require("./grid.mjs");
-var _gridMjsDefault = parcelHelpers.interopDefault(_gridMjs);
-var _manipulationMjs = require("./manipulation.mjs");
-var _manipulationMjsDefault = parcelHelpers.interopDefault(_manipulationMjs);
-var _effectFadeMjs = require("./effect-fade.mjs");
-var _effectFadeMjsDefault = parcelHelpers.interopDefault(_effectFadeMjs);
-var _effectCubeMjs = require("./effect-cube.mjs");
-var _effectCubeMjsDefault = parcelHelpers.interopDefault(_effectCubeMjs);
-var _effectFlipMjs = require("./effect-flip.mjs");
-var _effectFlipMjsDefault = parcelHelpers.interopDefault(_effectFlipMjs);
-var _effectCoverflowMjs = require("./effect-coverflow.mjs");
-var _effectCoverflowMjsDefault = parcelHelpers.interopDefault(_effectCoverflowMjs);
-var _effectCreativeMjs = require("./effect-creative.mjs");
-var _effectCreativeMjsDefault = parcelHelpers.interopDefault(_effectCreativeMjs);
-var _effectCardsMjs = require("./effect-cards.mjs");
-var _effectCardsMjsDefault = parcelHelpers.interopDefault(_effectCardsMjs);
-
-},{"./virtual.mjs":"lnC23","./keyboard.mjs":"6aaP5","./mousewheel.mjs":"eTnkH","./navigation.mjs":"lJ4k2","./pagination.mjs":"9u1CB","./scrollbar.mjs":"cciA8","./parallax.mjs":"eHHIn","./zoom.mjs":"ltxjG","./controller.mjs":"aycgc","./a11y.mjs":"eyTe1","./history.mjs":"1zK9H","./hash-navigation.mjs":"efrWr","./autoplay.mjs":"1BZT7","./thumbs.mjs":"1je3m","./free-mode.mjs":"9Zce7","./grid.mjs":"gFqWO","./manipulation.mjs":"egSSj","./effect-fade.mjs":"7xOD5","./effect-cube.mjs":"bYTjs","./effect-flip.mjs":"kq7Ix","./effect-coverflow.mjs":"i291F","./effect-creative.mjs":"3xLMe","./effect-cards.mjs":"5uuhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lnC23":[function(require,module,exports) {
+},{"./ssr-window.esm.mjs":"th8PY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lnC23":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Virtual);
@@ -8793,6 +8789,79 @@ function EffectCards(_ref) {
     });
 }
 
-},{"../shared/create-shadow.mjs":"bWkQq","../shared/effect-init.mjs":"88TTi","../shared/effect-target.mjs":"3jkAD","../shared/effect-virtual-transition-end.mjs":"dzFvU","../shared/utils.mjs":"9mU7V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dGmMB":[function() {},{}],"ae55e":[function() {},{}],"lT27W":[function() {},{}]},["3smKr","bB7Pu"], "bB7Pu", "parcelRequire94c2")
+},{"../shared/create-shadow.mjs":"bWkQq","../shared/effect-init.mjs":"88TTi","../shared/effect-target.mjs":"3jkAD","../shared/effect-virtual-transition-end.mjs":"dzFvU","../shared/utils.mjs":"9mU7V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ktz6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Virtual", ()=>(0, _virtualMjsDefault.default));
+parcelHelpers.export(exports, "Keyboard", ()=>(0, _keyboardMjsDefault.default));
+parcelHelpers.export(exports, "Mousewheel", ()=>(0, _mousewheelMjsDefault.default));
+parcelHelpers.export(exports, "Navigation", ()=>(0, _navigationMjsDefault.default));
+parcelHelpers.export(exports, "Pagination", ()=>(0, _paginationMjsDefault.default));
+parcelHelpers.export(exports, "Scrollbar", ()=>(0, _scrollbarMjsDefault.default));
+parcelHelpers.export(exports, "Parallax", ()=>(0, _parallaxMjsDefault.default));
+parcelHelpers.export(exports, "Zoom", ()=>(0, _zoomMjsDefault.default));
+parcelHelpers.export(exports, "Controller", ()=>(0, _controllerMjsDefault.default));
+parcelHelpers.export(exports, "A11y", ()=>(0, _a11YMjsDefault.default));
+parcelHelpers.export(exports, "History", ()=>(0, _historyMjsDefault.default));
+parcelHelpers.export(exports, "HashNavigation", ()=>(0, _hashNavigationMjsDefault.default));
+parcelHelpers.export(exports, "Autoplay", ()=>(0, _autoplayMjsDefault.default));
+parcelHelpers.export(exports, "Thumbs", ()=>(0, _thumbsMjsDefault.default));
+parcelHelpers.export(exports, "FreeMode", ()=>(0, _freeModeMjsDefault.default));
+parcelHelpers.export(exports, "Grid", ()=>(0, _gridMjsDefault.default));
+parcelHelpers.export(exports, "Manipulation", ()=>(0, _manipulationMjsDefault.default));
+parcelHelpers.export(exports, "EffectFade", ()=>(0, _effectFadeMjsDefault.default));
+parcelHelpers.export(exports, "EffectCube", ()=>(0, _effectCubeMjsDefault.default));
+parcelHelpers.export(exports, "EffectFlip", ()=>(0, _effectFlipMjsDefault.default));
+parcelHelpers.export(exports, "EffectCoverflow", ()=>(0, _effectCoverflowMjsDefault.default));
+parcelHelpers.export(exports, "EffectCreative", ()=>(0, _effectCreativeMjsDefault.default));
+parcelHelpers.export(exports, "EffectCards", ()=>(0, _effectCardsMjsDefault.default));
+var _virtualMjs = require("./virtual.mjs");
+var _virtualMjsDefault = parcelHelpers.interopDefault(_virtualMjs);
+var _keyboardMjs = require("./keyboard.mjs");
+var _keyboardMjsDefault = parcelHelpers.interopDefault(_keyboardMjs);
+var _mousewheelMjs = require("./mousewheel.mjs");
+var _mousewheelMjsDefault = parcelHelpers.interopDefault(_mousewheelMjs);
+var _navigationMjs = require("./navigation.mjs");
+var _navigationMjsDefault = parcelHelpers.interopDefault(_navigationMjs);
+var _paginationMjs = require("./pagination.mjs");
+var _paginationMjsDefault = parcelHelpers.interopDefault(_paginationMjs);
+var _scrollbarMjs = require("./scrollbar.mjs");
+var _scrollbarMjsDefault = parcelHelpers.interopDefault(_scrollbarMjs);
+var _parallaxMjs = require("./parallax.mjs");
+var _parallaxMjsDefault = parcelHelpers.interopDefault(_parallaxMjs);
+var _zoomMjs = require("./zoom.mjs");
+var _zoomMjsDefault = parcelHelpers.interopDefault(_zoomMjs);
+var _controllerMjs = require("./controller.mjs");
+var _controllerMjsDefault = parcelHelpers.interopDefault(_controllerMjs);
+var _a11YMjs = require("./a11y.mjs");
+var _a11YMjsDefault = parcelHelpers.interopDefault(_a11YMjs);
+var _historyMjs = require("./history.mjs");
+var _historyMjsDefault = parcelHelpers.interopDefault(_historyMjs);
+var _hashNavigationMjs = require("./hash-navigation.mjs");
+var _hashNavigationMjsDefault = parcelHelpers.interopDefault(_hashNavigationMjs);
+var _autoplayMjs = require("./autoplay.mjs");
+var _autoplayMjsDefault = parcelHelpers.interopDefault(_autoplayMjs);
+var _thumbsMjs = require("./thumbs.mjs");
+var _thumbsMjsDefault = parcelHelpers.interopDefault(_thumbsMjs);
+var _freeModeMjs = require("./free-mode.mjs");
+var _freeModeMjsDefault = parcelHelpers.interopDefault(_freeModeMjs);
+var _gridMjs = require("./grid.mjs");
+var _gridMjsDefault = parcelHelpers.interopDefault(_gridMjs);
+var _manipulationMjs = require("./manipulation.mjs");
+var _manipulationMjsDefault = parcelHelpers.interopDefault(_manipulationMjs);
+var _effectFadeMjs = require("./effect-fade.mjs");
+var _effectFadeMjsDefault = parcelHelpers.interopDefault(_effectFadeMjs);
+var _effectCubeMjs = require("./effect-cube.mjs");
+var _effectCubeMjsDefault = parcelHelpers.interopDefault(_effectCubeMjs);
+var _effectFlipMjs = require("./effect-flip.mjs");
+var _effectFlipMjsDefault = parcelHelpers.interopDefault(_effectFlipMjs);
+var _effectCoverflowMjs = require("./effect-coverflow.mjs");
+var _effectCoverflowMjsDefault = parcelHelpers.interopDefault(_effectCoverflowMjs);
+var _effectCreativeMjs = require("./effect-creative.mjs");
+var _effectCreativeMjsDefault = parcelHelpers.interopDefault(_effectCreativeMjs);
+var _effectCardsMjs = require("./effect-cards.mjs");
+var _effectCardsMjsDefault = parcelHelpers.interopDefault(_effectCardsMjs);
+
+},{"./virtual.mjs":"lnC23","./keyboard.mjs":"6aaP5","./mousewheel.mjs":"eTnkH","./navigation.mjs":"lJ4k2","./pagination.mjs":"9u1CB","./scrollbar.mjs":"cciA8","./parallax.mjs":"eHHIn","./zoom.mjs":"ltxjG","./controller.mjs":"aycgc","./a11y.mjs":"eyTe1","./history.mjs":"1zK9H","./hash-navigation.mjs":"efrWr","./autoplay.mjs":"1BZT7","./thumbs.mjs":"1je3m","./free-mode.mjs":"9Zce7","./grid.mjs":"gFqWO","./manipulation.mjs":"egSSj","./effect-fade.mjs":"7xOD5","./effect-cube.mjs":"bYTjs","./effect-flip.mjs":"kq7Ix","./effect-coverflow.mjs":"i291F","./effect-creative.mjs":"3xLMe","./effect-cards.mjs":"5uuhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dGmMB":[function() {},{}],"ae55e":[function() {},{}],"lT27W":[function() {},{}]},["3smKr","bB7Pu"], "bB7Pu", "parcelRequire94c2")
 
 //# sourceMappingURL=index.3d214d75.js.map

@@ -1,4 +1,4 @@
-import Swiper from "swiper";
+import Swiper from "swiper/bundle";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css";
@@ -14,54 +14,52 @@ const textArea = document.getElementById("message");
 const notify = document.getElementById("notify");
 const heads = document.querySelector(".heading--two");
 
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".mySwiper", {
   modules: [Navigation, Pagination],
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 1,
-
   breakpoints: {
-    640: {
+    320: {
       slidesPerView: 1,
-      //   spaceBetween: 20,
     },
-    768: {
+    480: {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    1024: {
+    600: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
   },
-});
-var swiper = new Swiper(".mySwiper2", {
-  modules: [Navigation, Pagination, Autoplay],
-  spaceBetween: 100,
-  slidesPerView: 1,
-  loop: true,
-
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
 });
+// var swiper = new Swiper(".mySwiper2", {
+//   modules: [Navigation, Pagination, Autoplay],
+//   spaceBetween: 100,
+//   slidesPerView: 1,
+//   loop: true,
+
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
 
 function succes(el) {
   el.classList.add("succes");
