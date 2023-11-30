@@ -132,7 +132,7 @@ $font-style-normal: normal;
   &:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
-    border: 2px solid primary-color;
+    border: 2px solid $primary-color;
     background-color: $primary-color;
   }
 }
@@ -161,7 +161,7 @@ $font-style-normal: normal;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  // height: 100%;
 
   &__container {
     @extend .container;
@@ -346,6 +346,7 @@ $font-style-normal: normal;
 .swiper {
   width: 100%;
   height: 100%;
+  padding: 0px 45px;
 }
 .heading--wrapper {
   @extend .center;
@@ -356,6 +357,7 @@ $font-style-normal: normal;
   @extend .center;
   margin-top: 50px;
   max-width: 960px;
+  width: 100%;
 }
 
 .card--wrapper {
@@ -823,4 +825,177 @@ $font-style-normal: normal;
   align-items: center;
   width: 100%;
   max-width: 1020px;
+}
+
+// ///RESPONSIVE////
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+  }
+  .header {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .header__container--navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .header__container {
+    padding: 0px !important;
+  }
+
+  .header__container--rigth-side {
+    gap: 15px !important;
+    flex-direction: column;
+    padding-right: 0px !important;
+  }
+  .head__container--rigth-side__ul {
+  }
+  .button-wrap {
+    flex-direction: column !important;
+    gap: 25px !important;
+    align-items: center;
+  }
+
+  .header__container--heading {
+    padding: 20px 0px !important;
+  }
+  .heading-one {
+    max-width: 461px;
+    text-align: center;
+    font-size: 2.25rem;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-super-bold;
+    line-height: 5rem;
+    letter-spacing: 0.2px;
+  }
+  .heading--two {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    max-width: 600px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .h2-exception {
+    text-align: start;
+  }
+  .heading-three {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: $text-color;
+  }
+
+  .heading-four {
+    max-width: 573px;
+    text-align: center;
+    font-size: 1rem;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    line-height: $line-height;
+    letter-spacing: 0.2px;
+    padding: 0px 5px;
+  }
+  .heading-five {
+    color: $text-color;
+  }
+  .heading-six {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .h5-exception {
+    color: white;
+  }
+
+  .heading--p {
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    max-width: 320px;
+    margin: auto;
+    text-align: center;
+  }
+  .heading--wrapper {
+    max-width: 320px;
+    gap: 15px;
+  }
+  .slider-wrapper {
+    max-width: 300px;
+  }
+  .container__video {
+    max-width: 300px;
+    padding: 0px 0px !important;
+  }
+  #play-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 1.5rem !important;
+  }
+  .meet-team {
+    max-width: 300px;
+  }
+  .team-wraper {
+    flex-direction: column;
+  }
+  .container__contact-us {
+    max-width: 300px;
+  }
+  .contact-us__form {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .call-us__container {
+    padding: 0px 15px;
+    gap: 10px;
+  }
+
+  .footer__primary {
+    flex-direction: column;
+  }
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer-logo {
+    padding: 0 !important;
+  }
+  .footer__main {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    max-width: 200px;
+  }
+
+  .footer__nav {
+    display: flex !important;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+  }
+  .input-wrap {
+    display: flex !important;
+    flex-direction: column;
+  }
 }
