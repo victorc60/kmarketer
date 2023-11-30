@@ -621,25 +621,29 @@ new (0, _bundleDefault.default)(".mySwiper", {
     },
     slidesPerView: 1
 });
-// var swiper = new Swiper(".mySwiper2", {
-//   modules: [Navigation, Pagination, Autoplay],
-//   spaceBetween: 100,
-//   slidesPerView: 1,
-//   loop: true,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+var swiper = new (0, _bundleDefault.default)(".mySwiper2", {
+    modules: [
+        (0, _modules.Navigation),
+        (0, _modules.Pagination),
+        (0, _modules.Autoplay)
+    ],
+    spaceBetween: 100,
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
 function succes(el) {
     el.classList.add("succes");
     el.classList.remove("error");

@@ -40,26 +40,26 @@ new Swiper(".mySwiper", {
   },
   slidesPerView: 1,
 });
-// var swiper = new Swiper(".mySwiper2", {
-//   modules: [Navigation, Pagination, Autoplay],
-//   spaceBetween: 100,
-//   slidesPerView: 1,
-//   loop: true,
+var swiper = new Swiper(".mySwiper2", {
+  modules: [Navigation, Pagination, Autoplay],
+  spaceBetween: 100,
+  slidesPerView: 1,
+  loop: true,
 
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 function succes(el) {
   el.classList.add("succes");
